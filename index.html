@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🎬 My Movie List</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<div id="app">
+  <!-- HEADER -->
+  <header class="app-header">
+    <h1>🎬 My Movie List</h1>
+    <p><span id="total"></span> movies in your collection</p>
+  </header>
+
+  <!-- STATS -->
+  <div class="stats-bar">
+    <div class="stat-pill pink">🎬 <span id="total"></span></div>
+    <div class="stat-pill mint">✔ <span id="watched"></span></div>
+    <div class="stat-pill peach">⭐ <span id="avg"></span></div>
+    <div class="stat-pill sky">🔥 <span id="topGenre"></span></div>
+  </div>
+
+  <!-- FILTER -->
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="watched">Watched</button>
+    <button class="filter-btn" data-filter="unwatched">Unwatched</button>
+  </div>
+
+  <!-- ADD FORM -->
+  <form class="add-form">
+    <h2>+ Add Movie</h2>
+
+    <input id="title" placeholder="Title">
+    <input id="year" placeholder="Year">
+
+    <select id="genre">
+      <option value="action">Action</option>
+      <option value="scifi">SciFi</option>
+      <option value="thriller">Thriller</option>
+      <option value="comedy">Comedy</option>
+    </select>
+
+    <select id="rating">
+      <option value="1">★</option>
+      <option value="2">★★</option>
+      <option value="3">★★★</option>
+      <option value="4">★★★★</option>
+      <option value="5">★★★★★</option>
+    </select>
+
+    <button class="add-btn">Add</button>
+  </form>
+
+  <!-- MOVIES -->
+  <h2>Movies (<span id="count"></span>)</h2>
+  <div class="movie-grid movies"></div>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
